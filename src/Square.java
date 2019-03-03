@@ -1,3 +1,5 @@
+import static java.lang.System.exit;
+
 public class Square extends Figure implements IPrint {
     double side;
 
@@ -6,7 +8,10 @@ public class Square extends Figure implements IPrint {
         this.side = 10;
     }
     public Square(double side) {
-        this.side = side;
+        if(side >0){
+            this.side = side;
+        }
+        else exit(0);
     }
 
     @Override
