@@ -19,7 +19,7 @@ public class Triangle extends Figure implements IPrint{
     }
     // method that verify whether you can make a triangle
     public static boolean canBecomeATriangle(double a, double b, double c){
-        if(a+b>c || a+c>b || b+c>a) return true;
+        if(a+b>c & a+c>b || b+c>a) return true;
         else{
             System.out.println("You cannot build a triangle with given lenghts, silly");
             return false;
