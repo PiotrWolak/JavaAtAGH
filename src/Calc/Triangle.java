@@ -1,3 +1,5 @@
+package Calc;
+
 import static java.lang.System.exit;
 
 public class Triangle extends Figure implements IPrint{
@@ -18,8 +20,8 @@ public class Triangle extends Figure implements IPrint{
         else exit(0);
     }
     // method that verify whether you can make a triangle
-    public static boolean canBecomeATriangle(double a, double b, double c){
-        if(a+b>c & a+c>b || b+c>a) return true;
+    private static boolean canBecomeATriangle(double a, double b, double c){
+        if(a+b>c && a+c>b && b+c>a) return true;
         else{
             System.out.println("You cannot build a triangle with given lenghts, silly");
             return false;
@@ -27,7 +29,7 @@ public class Triangle extends Figure implements IPrint{
     }
     // the method below is an implementation of Heron's formula
     @Override
-    double calculateArea() {
+    protected double calculateArea() {
         double area = 0;
         double p =(a+b+c)/2;
         area = Math.sqrt((p*(p-a)*(p-b)*(p-c)));
@@ -35,7 +37,7 @@ public class Triangle extends Figure implements IPrint{
     }
 
     @Override
-    double calculatePerimeter() {
+    protected double calculatePerimeter() {
         return (a+b+c);
     }
 

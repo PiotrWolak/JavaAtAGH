@@ -1,9 +1,13 @@
+package Calc;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        while(true){
-          menu();
+        while (true) {
+            menu();
+
         }
 
     }
@@ -32,7 +36,7 @@ public class App {
                 break;
             case 3:
                 System.out.println("enter 3 sides of triangle separated by enter");
-                double temp1,temp2,temp3;
+                double temp1, temp2, temp3;
                 temp1 = input.nextDouble();
                 temp2 = input.nextDouble();
                 temp3 = input.nextDouble();

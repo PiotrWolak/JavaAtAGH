@@ -1,6 +1,6 @@
-
+package Calc;
 
 public abstract class Figure {
-    abstract double calculateArea();
-    abstract double calculatePerimeter();
+    protected abstract double calculateArea();
+    protected abstract double calculatePerimeter();
 }

@@ -1,3 +1,5 @@
+package Calc;
+
 import static java.lang.System.exit;
 
 public class Square extends Figure implements IPrint {
@@ -15,12 +17,12 @@ public class Square extends Figure implements IPrint {
     }
 
     @Override
-    double calculateArea() {
+    protected double calculateArea() {
         return side*side;
     }
 
     @Override
-    double calculatePerimeter() {
+    protected double calculatePerimeter() {
         return 4*side;
     }
 
